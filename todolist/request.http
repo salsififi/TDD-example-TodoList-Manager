@@ -1,0 +1,19 @@
+@id= 8d51f135-4d6b-413c-98d2-2c1652866a51
+@non-existing-id= 55555
+
+### GET ALL
+GET http://localhost:8000/todos
+
+### CREATE TODO_
+POST http://localhost:800/todos
+Content-type: application/json
+
+{
+    "title": "A new to-do list"
+}
+
+### TOGGLE TODO_
+PUT http://localhost:8000/todos/toggle/{{id}}
+
+### TOGGLE TODO_NOT_EXISTING
+PUT http://localhost:8000/todos/toggle/{{non-existing-id}}
